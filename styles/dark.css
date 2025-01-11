@@ -1,0 +1,69 @@
+/*
+  Специально для тёмной темы при наличии класса,
+  здесь окажутся стили, которые нужно переопределить принудительно,
+  переключая тему
+*/
+
+.page.theme_dark {
+  --bg-color: #000028;
+  --title-color: #db00ff;
+  --text-color: #f1b2ce;
+  --subtitle-color: var(--bg-color);
+  --accent-color: #ff0070;
+  --hover-border: 1px solid rgba(255, 0, 112, 0.4);
+  background-image: url(../images/cover-image-dark.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.theme_dark .header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
+}
+
+.theme_dark .header__theme-menu-button:hover {
+  border: var(--hover-border);
+}
+
+.theme_dark .header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--accent-color);
+}
+@media (prefers-color-scheme: dark) {
+  .page.theme_auto {
+    --bg-color: #000028;
+    --title-color: #db00ff;
+    --text-color: #f1b2ce;
+    --subtitle-color: var(--bg-color);
+    --accent-color: #ff0070;
+    background-image: url(../images/cover-image-dark.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .theme_auto .header__theme-menu-button {
+    color: var(--accent-color);
+  }
+  
+  .theme_auto .header__theme-menu-button_active {
+    border: 1px solid var(--accent-color);
+  }
+  
+  .theme_auto .header__theme-menu-button:hover {
+    border: 1px solid rgba(255, 0, 112, 0.4);
+  }
+  
+  .theme_auto .header__theme-menu-button:focus-visible {
+    border-block-end: 1px solid var(--accent-color);
+  }
+  
+  .theme_auto .decorated-zone::before,
+  .theme_auto .decorated-zone::after {
+    border-color: var(--accent-color);
+  }
+  
+  .theme_auto .content_title {
+    color: var(--accent-color);
+  }
+}
