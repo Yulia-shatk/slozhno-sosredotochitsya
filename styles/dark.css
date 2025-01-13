@@ -27,7 +27,11 @@
     background-size: cover;
     background-attachment: fixed;
   }
-
+  .theme_auto .content_link {
+    position: relative;
+    text-shadow: 2px 2px 0 var(--accent-color);
+    text-decoration: none;
+  }
   .theme_auto .header__theme-menu-button {
     color: var(--accent-color);
   }
