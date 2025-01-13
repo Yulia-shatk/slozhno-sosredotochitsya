@@ -3,10 +3,68 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-
+/* Файл light.css */
 .page.theme_light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --bg-color: #FFF1F7;
+  --title-color: #ffc2e6;
+  --text-color: #353430;
+  --subtitle-color: var(--text-color);
+  --accent-color: #ff0070;
+  --background-color: #FF8DCB;
+  --hover-border: 1px solid rgba(53, 52, 48, 0.4);
+  background-image: url(../images/cover-image-light.png);
+}
+
+@media (prefers-color-scheme: light) {
+  .page.theme_auto {
+    --bg-color: #FFF1F7;
+    --title-color: #ffc2e6;
+    --text-color: #353430;
+    --subtitle-color: var(--text-color);
+    --background-color: #FF8DCB;
+    --accent-color: #ff0070;
+    background-color: var(--bg-color);
+    background-image: url(../images/cover-image-light.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .theme_auto .header__theme-menu-button {
+    color: var(--text-color);
+  }
+  
+  .theme_auto .header__theme-menu-button_active {
+    border: 1px solid var(--text-color);
+  }
+  .theme_auto .header__theme-menu-button:hover {
+    border: 1px solid rgba(53, 52, 48, 0.4);
+  }
+  
+  .theme_auto .header__theme-menu-button:focus-visible {
+    border-block-end: 1px solid var(--text-color);
+  }
+  
+  .theme_auto .header_decoration {
+    display: none;
+  }
+  
+  .theme_auto .decorated-zone::before,
+  .theme_auto .decorated-zone::after {
+    border-color: var(--text-color);
+  }
+  
+  .theme_auto .content_title {
+    color: var(--text-color);
+  }
+  .theme_auto .title-decor {
+    background-color: var(--background-color);
+    color: var(--subtitle-color);
+    font-weight: bold;
+  }
+  .theme_auto .title-decor-lighter {
+    background-color: var(--background-color);
+    color: var(--subtitle-color);
+    font-weight: 400;
+  }
 }
