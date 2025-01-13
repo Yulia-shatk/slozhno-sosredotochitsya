@@ -15,10 +15,3 @@
   --font-family: 'IBM Plex mono', monospace;
   --font-size: 18px;
 }
-.content__section {
-  display: grid;
-  gap: var(--big-gap);
-  margin-block-start: 30px;
-  padding: var(--small-gap);
-  line-height: 1.3em;
-}
